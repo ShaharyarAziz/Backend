@@ -40,15 +40,15 @@ app.put("/cricket/:id", (req, res) => {
 });
 //Delete
 app.delete("/cricket/:id", (req, res) => {
-    const n = cricket_item.findIndex(
-      (item) => item.id === parseInt(req.params.id)
-    );
-    if (n === -1) {
-      return res.status(404).send("Item not found");
-    }
-    cricket_item.splice(n, 1);
-    return res.status(204).send("Item Deleted Successfully"); // Status 204 should not send a response body
-  });
+  const n = cricket_item.findIndex(
+    (item) => item.id === parseInt(req.params.id)
+  );
+  if (n === -1) {
+    return res.status(404).send("Item not found");
+  }
+  cricket_item.splice(n, 1);
+  return res.status(204).send("Item Deleted Successfully"); // Status 204 should not send a response body
+});
 app.listen(port, () => {
   console.log(`Server is runnning on port:${port}`);
 });
