@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "name": "backend",
+  "description": "Hey there! 👋 I'm Shaharyar Aziz Butt, a passionate Software Tester and Quality Assurance enthusiast on a mission to ensure software quality and delight users with seamless experiences. 🌟",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
