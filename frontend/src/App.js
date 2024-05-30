@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/movies")
+      .get("http://localhost:4000/movies")
       .then((response) => {
         setMovies(response.data);
       })

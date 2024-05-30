@@ -46,8 +46,9 @@ app.get("/movies", (req, res) => {
       genre: "Horror",
       Lenght: "120 minutes",
     },
+    
   ];
-  res.json(Movies);
+  res.send(Movies);
 });
 
 app.listen(process.env.PORT, () => {
