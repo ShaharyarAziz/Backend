@@ -1,9 +1,15 @@
 const express = require("express");
-require("dotenv").config();
 const app = express();
 const port = 3000;
 const cors = require("cors");
-
+require("dotenv").config();
+const dotenv = require("dotenv");
+const connectdb = require("./db/index");
+const { default: mongoose, connect } = require("mongoose");
+dotenv.config({
+  path: "./env",
+});
+connectdb();
 app.use(cors());
 app.get("/", (req, res) => {
   res.send("Hello World!");
@@ -46,7 +52,6 @@ app.get("/movies", (req, res) => {
       genre: "Horror",
       Lenght: "120 minutes",
     },
-    
   ];
   res.send(Movies);
 });
